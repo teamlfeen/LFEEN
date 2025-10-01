@@ -1,0 +1,68 @@
+/* rtl.css — Overrides بسيطة للعربية والاتجاه من اليمين لليسار */
+
+html, body {
+  direction: rtl;
+}
+
+body {
+  /* خط عربي مناسب، مع Lato كبديل لاتيني */
+  font-family: 'Tajawal', 'Lato', sans-serif;
+  text-align: right; /* الأصل في style.css كان left */
+}
+
+/* اللوجو والبلوكات الرئيسية نخليها في الوسط */
+
+.subscribe,
+.coming-soon,
+.social {
+  text-align: center;
+}
+
+/* الفقرة العامة */
+.coming-soon p,
+.subscribe p {
+  line-height: 2;
+}
+
+/* حقول النموذج: إبقاء بريد المستخدم من اليسار لسهولة الكتابة */
+.subscribe form input.subscribe-email {
+  direction: ltr;
+  text-align: left;
+}
+
+/* مسافات عناصر النموذج في RTL */
+.form-inline .form-group {
+  margin-left: 10px;   /* بدلاً من margin-right */
+  margin-right: 0;
+}
+
+/* العدّاد أصلاً مُتمركز، لكن نتأكد من سلوكه في الشاشات الصغيرة */
+.timer {
+  text-align: center;
+}
+
+/* عناوين كبيرة بالعربية */
+.coming-soon h2 {
+  letter-spacing: 0; /* تجنّب التباعد اللاتيني */
+}
+
+/* الهيدر الفرعي */
+.subscribe h3 {
+  letter-spacing: 0;
+}
+
+/* استبدال الكلمات الإنجليزية بالعربية للدوائر ممكن يكون من HTML؛ هنا فقط تنسيقات */
+.timer .days, .timer .hours, .timer .minutes, .timer .seconds {
+  font-variant-numeric: tabular-nums; /* أرقام ثابتة العرض لثبات الشكل */
+}
+
+/* تحسينات لموبايل */
+@media (max-width: 767px) {
+  .subscribe form input.subscribe-email,
+  .subscribe form button {
+    width: 100%;
+  }
+  .form-inline .form-group {
+    margin-left: 0;
+  }
+}
