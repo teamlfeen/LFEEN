@@ -7,7 +7,7 @@ jQuery(document).ready(function() {
     $('.coming-soon').backstretch([
       "assets/img/backgrounds/1.jpg"
     , "assets/img/backgrounds/2.jpg"
-    , "assets/img/backgrounds/3.JFIF"
+    , "assets/img/backgrounds/3.jfif"
     ], {duration: 3000, fade: 750});
 
     /*
